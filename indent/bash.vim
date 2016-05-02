@@ -15,9 +15,9 @@ let b:undo_indent = 'setlocal indentexpr< indentkeys< smartindent<'
 let s:cpo_save = &cpo
 set cpo&vim
 
-function s:buffer_shiftwidth()
+function! s:buffer_shiftwidth()
   return shiftwidth()
-endfunction
+endfunction!
 
 let s:sh_indent_defaults = {
       \ 'default': function('s:buffer_shiftwidth'),
