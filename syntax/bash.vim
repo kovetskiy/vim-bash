@@ -297,10 +297,10 @@ if !exists("g:is_posix")
  syn keyword shFunctionKey function	skipwhite skipnl nextgroup=shFunctionTwo
 endif
 
-ShFoldFunctions syn region shFunctionOne	matchgroup=shFunction start="^\s*\h[-a-zA-Z_0-9]*\s*()\_s*{"		end="}"	contains=@shFunctionList			skipwhite skipnl nextgroup=shFunctionStart,shQuickComment
-ShFoldFunctions syn region shFunctionTwo	matchgroup=shFunction start="\<[^d][^o]\&\h[-a-zA-Z_0-9]*\s*\%(()\)\=\_s*{"	end="}"	contains=shFunctionKey,@shFunctionList contained	skipwhite skipnl nextgroup=shFunctionStart,shQuickComment
-ShFoldFunctions syn region shFunctionThree	matchgroup=shFunction start="^\s*\h[-a-zA-Z_0-9]*\s*()\_s*("		end=")"	contains=@shFunctionList			skipwhite skipnl nextgroup=shFunctionStart,shQuickComment
-ShFoldFunctions syn region shFunctionFour	matchgroup=shFunction start="\<[^d]\h[^o]\&[-a-zA-Z_0-9]*\s*\%(()\)\=\_s*)"	end=")"	contains=shFunctionKey,@shFunctionList contained	skipwhite skipnl nextgroup=shFunctionStart,shQuickComment
+ShFoldFunctions syn region shFunctionOne	matchgroup=shFunction start="^\s*[-a-zA-Z_0-9:]*\s*()\_s*{"		end="}"	contains=@shFunctionList			skipwhite skipnl nextgroup=shFunctionStart,shQuickComment
+ShFoldFunctions syn region shFunctionTwo	matchgroup=shFunction start="\<[^d][^o]\&[-a-zA-Z_0-9:]*\s*\%(()\)\=\_s*{"	end="}"	contains=shFunctionKey,@shFunctionList contained	skipwhite skipnl nextgroup=shFunctionStart,shQuickComment
+ShFoldFunctions syn region shFunctionThree	matchgroup=shFunction start="^\s*[-a-zA-Z_0-9:]*\s*()\_s*("		end=")"	contains=@shFunctionList			skipwhite skipnl nextgroup=shFunctionStart,shQuickComment
+ShFoldFunctions syn region shFunctionFour	matchgroup=shFunction start="\<[^d][^o]\&[-a-zA-Z_0-9:]*\s*\%(()\)\=\_s*)"	end=")"	contains=shFunctionKey,@shFunctionList contained	skipwhite skipnl nextgroup=shFunctionStart,shQuickComment
 
 " Parameter Dereferencing: {{{1
 " ========================
