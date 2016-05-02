@@ -1,4 +1,9 @@
+func! s:set_bash()
+    setlocal ft=bash
+    setlocal iskeyword+=:
+endfunc!
+
 augroup vim_bash
     au!
-    au BufNewFile,BufRead *.sh set ft=bash
+    au BufNewFile,BufRead *.sh call s:set_bash()
 augroup end
