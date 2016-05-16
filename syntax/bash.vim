@@ -214,6 +214,9 @@ syn keyword bashStatement chmod clear complete du egrep expr fgrep find gnufind 
 syn keyword bashAdminStatement daemon killall killproc nice reload restart start status stop
 syn keyword bashStatement	command compgen
 
+syn match bashCall "\([-a-zA-Z_0-9]\+\)\?:[-a-zA-Z_0-9:]\+"
+syn cluster shCommandSubList add=bashCall
+
 syn match   shSource	"^\.\s"
 syn match   shSource	"\s\.\s"
 
@@ -478,6 +481,7 @@ hi def link shWrapLineOperator	shOperator
 hi def link bashAdminStatement	shStatement
 hi def link bashSpecialVariables	shShellVariables
 hi def link bashStatement		shStatement
+hi def link bashCall		shFunction
 hi def link shFunctionParen		Delimiter
 hi def link shFunctionDelim		Delimiter
 hi def link shCharClass		shSpecial
