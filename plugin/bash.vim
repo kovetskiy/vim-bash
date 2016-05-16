@@ -1,6 +1,7 @@
 func! s:set_bash()
     setlocal ft=bash
     setlocal iskeyword+=:
+    setlocal iskeyword+=-
 endfunc!
 
 func! s:set_bash_if_shebang()
