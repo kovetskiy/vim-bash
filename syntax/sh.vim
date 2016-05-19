@@ -1,3 +1,8 @@
+if exists("b:current_syntax")
+  finish
+endif
+
+let b:current_syntax = "sh"
 if version < 600
   syntax clear
 endif

@@ -4,6 +4,12 @@
 " Original Author:     Nikolai Weibull <now@bitwi.se>
 " License:             Vim (see :h license)
 
+if exists("b:did_indent")
+  finish
+endif
+let b:did_indent = 1
+
+
 setlocal indentexpr=GetShIndent()
 setlocal indentkeys+=0=then,0=do,0=else,0=elif,0=fi,0=esac,0=done,0=end,),0=;;,0=;&
 setlocal indentkeys+=0=fin,0=fil,0=fip,0=fir,0=fix
