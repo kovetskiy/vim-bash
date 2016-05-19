@@ -552,6 +552,6 @@ delc ShFoldIfDoFor
 
 " Set Current Syntax: {{{1
 " ===================
-let b:current_syntax = "bash"
+let b:current_syntax = "sh"
 
 " vim: ts=16 fdm=marker
