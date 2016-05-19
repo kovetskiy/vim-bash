@@ -1,18 +1,18 @@
-func! s:set_bash()
-    setlocal ft=bash
+func! s:set_ft()
+    setlocal ft=sh
     setlocal iskeyword+=:
     setlocal iskeyword+=-
 endfunc!
 
-func! s:set_bash_if_shebang()
+func! s:set_ft_if_shebang()
     if getline(1) == "#!/bin/bash"
-        call s:set_bash()
+        call s:set_ft()
     endif
 endfunc!
 
 augroup vim_bash
     au!
-    au BufNewFile,BufRead *.sh call s:set_bash()
-    au BufNewFile,BufRead *.bash call s:set_bash()
-    au BufNewFile,BufRead * call s:set_bash_if_shebang()
+    au BufNewFile,BufRead *.sh call s:set_ft()
+    au BufNewFile,BufRead *.bash call s:set_ft()
+    au BufNewFile,BufRead * call s:set_ft_if_shebang()
 augroup end
